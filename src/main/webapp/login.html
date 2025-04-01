@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighthouse</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/registerStyle.css">
+   
+</head>
+
+<!-- <img src="Assets/logo.png" alt="user-login"> -->
+<body>
+    <main>
+        <form class="formulario" name="formulario" id="formulario" enctype="multipart/form-data"  method="post">
+            <!-- Encabezado-->
+            <img src="Assets/logo.png" alt="user-login">
+            <h1>Inicia Sesion</h1>
+
+            <!-- Usuario -->
+          
+                <div class="formulario_grupo" id="grupo_usuario">
+                    <label for="usuario" class="formulario_label">Usuario:</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" name="usuario" placeholder="Ej. John_123"  id="usuario" class="formulario_input">
+                        <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                    </div>
+                    <p class="formulario_input-error">El Usuario debe contener de 4 a 16 caracteres, estos deben ser letras, numeros o guion bajo.</p>
+                </div>
+
+                <!-- contraseña -->
+            <div class="formulario_grupo" id="grupo_password">
+                <label for="password" class="formulario_label">Contraseña:</label>
+                <div class="formulario_grupo-input">
+                    
+                    <input type="password" name="password" placeholder="Contraseña" id="password"  class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                </div>
+                <p class="formulario_input-error">La contraseña debe contener un minimo de 8 caracteres, este debera tener una letra en mayuscula, minusculas, minusculas comos signos de puntuación.</p>
+            </div>
+
+            <div class="formulario_mensaje" id="formulario_mensaje">
+                
+                <p><i class='bx bxs-error-alt'></i><b>Error: </b>Por favor, llene el formulario.</p>
+                
+            </div>
+
+            <br>
+
+            <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <button class="formulario_btn" type="submit" >Iniciar Sesion</button>
+                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+            </div>
+
+            <br>
+
+            <p>¿No tienes una cuenta? <a class="link" href="registro.html">Registrate </a></p>
+
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/valdLogin.js"></script>
+    <script src="js/valdState.js"></script>
+</body>
+</html>

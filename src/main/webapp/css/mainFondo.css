@@ -1,0 +1,44 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    background: #ccc;
+    font-family: 'Roboto Mono', monospace;
+    min-height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+header{
+    position: fixed;
+    top:0px;
+    right:0px;
+    left:0px;
+    height: 80px;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(135deg, #6495ED,#20B2AA);
+}
+
+.main{
+     padding-top: 1rem;
+    margin: 80px auto 0px;
+    overflow: hidden;
+}
+
+footer
+{
+    background: linear-gradient(135deg, #6495ED,#20B2AA);
+    padding: 3em;
+    margin-top: auto;
+}

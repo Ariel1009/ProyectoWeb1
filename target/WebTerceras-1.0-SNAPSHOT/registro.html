@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<box-icon name='power-off'></box-icon>-->
+    <title>Lighthouse</title>
+</head>
+
+<body>
+    <main>
+        <div class="title">Register</div>
+        <form class="formulario" name="formulario" id="formulario" enctype="multipart/form-data" method="POST">
+
+            <!-- Usuario  -->
+            <div class="formulario_grupo" id="grupo_usuario">
+                <label for="usuario" class="formulario_label">Usuario:</label>
+                <div class="formulario_grupo-input">
+                    <input type="text" name="usuario" placeholder="Ej. John_123" id="usuario" class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                </div>
+                <p class="formulario_input-error">El Usuario debe contener de 4 a 16 caracteres, estos deben ser letras,
+                    numeros o guion bajo.</p>
+            </div>
+
+            <!-- correo -->
+            <div class="formulario_grupo" id="grupo_email">
+                <label for="email" class="formulario_label">Email:</label>
+                <div class="formulario_grupo-input">
+
+                    <input type="email" name="email" placeholder="correo@correo.com" id="email"
+                        class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                </div>
+                <p class="formulario_input-error">Siga el formato tradicional de email aaa.aaa@aaa.aaa.</p>
+            </div>
+
+            <!-- nombre -->
+            <div class="formulario_grupo" id="grupo_nombre">
+                <label for="nombre" class="formulario_label">Nombre(s):</label>
+                <div class="formulario_grupo-input">
+
+                    <input type="text" id="nombre" name="nombre" placeholder="John" class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                    <p class="formulario_input-error">El Nombre solo puede contener letras y espacios.</p>
+                </div>
+
+            </div>
+
+            <!-- apellidos -->
+            <div class="formulario_grupo" id="grupo_apellidos">
+                <label for="apellido" class="formulario_label">Apellidos:</label>
+                <div class="formulario_grupo-input">
+
+                    <input type="text" name="apellido" placeholder="Smith" id="apellido" class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                    <p class="formulario_input-error">El Apellido solo puede contener letras espacios.</p>
+                </div>
+
+            </div>
+
+            <!-- contraseña -->
+            <div class="formulario_grupo" id="grupo_password">
+                <label for="password" class="formulario_label">Contraseña:</label>
+                <div class="formulario_grupo-input">
+
+                    <input type="password" name="password" placeholder="Contraseña" id="password"
+                        class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                </div>
+                <!-- <p class="formulario_input-error">La contraseña debe contener un minimo de 8 caracteres, este debera tener una letra en mayuscula, minusculas, minusculas comos signos de puntuación.</p> -->
+                <ul class="formulario_input-error">
+                    <li class="mas">Tiene que tener mayusculas</li>
+                    <li class="minus">Tiene que tener minusculas</li>
+                    <li class="nums">Tiene que tener numeros</li>
+                    <li class="sig">Tiene que tener signos</li>
+                    <li class="long">Tiene que ser mayor a 6 caracteres</li>
+                </ul>
+            </div>
+
+            <!-- contraseña2 -->
+            <div class="formulario_grupo" id="grupo_password2">
+                <label for="password2" class="formulario_label">Confirme su contraseña:</label>
+                <div class="formulario_grupo-input">
+
+                    <input type="password" name="password2" placeholder="Contraseña" id="password2"
+                        class="formulario_input">
+                    <i class="formulario_validacion-estado bx bxs-x-circle"></i>
+                </div>
+                <p class="formulario_input-error">Las contraseña deben ser iguales.</p>
+            </div>
+
+            <!-- Foto -->
+            <div class="formulario_grupo" id="grupo_foto">
+                <label for="foto" class="formulario_label">Suba su foto:</label>
+                <div class="formulario_grupo-input">
+                  
+                   <input type="file" class="form-control-file" name="img" id="img">
+                </div>
+            </div>
+
+            <!-- fecha  -->
+            <div class="formulario_grupo" id="grupo_fecha">
+                <label for="fecha" class="formulario_label">Fecha de Nacimiento:</label>
+                <div class="formulario_grupo-input">
+                    <input class="formulario_input" type="date" id="fecha" name="fecha" min="1990-01-01"
+                        max="2022-09-30" required>
+                </div>
+
+            </div>
+
+            <!--Mensaje de error-->
+            <div class="formulario_mensaje" id="formulario_mensaje">
+
+                <p><i class='bx bxs-error-alt'></i><b>Error: </b>Por favor, llene el formulario.</p>
+
+            </div>
+
+            <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <button class="formulario_btn" type="submit">Registrarse</button>
+                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+            </div>
+
+        </form>
+        <div class="formulario_grupo" id="grupo_iniciarsesion">
+            <p class="details">¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar Sesion</a></p>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/valdIndex.js"></script>
+    <script src="js/InsertarUser.js"></script>
+</body>
+
+</html>
